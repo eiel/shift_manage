@@ -1,30 +1,31 @@
-<table class="table table-bordered">
-<tr>
-	<td>タイムテーブル</td>
-	<td>月</td>
-	<td>火</td>
-	<td>水</td>
-	<td>木</td>
-	<td>金</td>
-</tr>
-<% 2.times do |i| %>
-<tr>
-	<td><%= i + 1 %>コマ目</td>
-	<% 5.times do %>
-	  <td><i class="icon-plus-sign"></i></td>
-	<% end %>
-</tr>
-<% end %>
-<tr>
-	<td>昼休憩</td>
-	<td colspan="5"></td>
-</tr>
-<% 3.times do |i| %>
-<tr>
-	<td><%= i + 3 %>コマ目</td>
-	<% 5.times do %>
-	  <td><i class="icon-plus-sign"></i></td>
-	<% end %>
-</tr>
-<% end %>
-</table>
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">月曜日</a></li>
+    <li><a href="#tab2" data-toggle="tab">火曜日</a></li>
+    <li><a href="#tab3" data-toggle="tab">水曜日</a></li>
+    <li><a href="#tab4" data-toggle="tab">木曜日</a></li>
+    <li><a href="#tab5" data-toggle="tab">金曜日</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <p>月曜日コンテンツ</p>
+      <%= render 'form' %>
+    </div>
+    <div class="tab-pane" id="tab2">
+      <p>火曜日コンテンツ</p>
+      <%= render 'form' %>
+    </div>
+    <div class="tab-pane" id="tab3">
+      <p>水曜日コンテンツ</p>
+      <%= render 'form' %>
+    </div>
+    <div class="tab-pane" id="tab4">
+      <p>木曜日コンテンツ</p>
+      <%= render 'form' %>
+    </div>
+    <div class="tab-pane" id="tab5">
+      <p>金曜日コンテンツ</p>
+      <%= render 'form' %>
+    </div>
+  </div>
+</div>
