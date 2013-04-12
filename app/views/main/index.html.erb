@@ -1,0 +1,30 @@
+<table class="table table-bordered">
+<tr>
+	<td>タイムテーブル</td>
+	<td>月</td>
+	<td>火</td>
+	<td>水</td>
+	<td>木</td>
+	<td>金</td>
+</tr>
+<% 2.times do |i| %>
+<tr>
+	<td><%= i + 1 %>コマ目</td>
+	<% 5.times do %>
+	  <td><i class="icon-plus-sign"></i></td>
+	<% end %>
+</tr>
+<% end %>
+<tr>
+	<td>昼休憩</td>
+	<td colspan="5"></td>
+</tr>
+<% 3.times do |i| %>
+<tr>
+	<td><%= i + 3 %>コマ目</td>
+	<% 5.times do %>
+	  <td><i class="icon-plus-sign"></i></td>
+	<% end %>
+</tr>
+<% end %>
+</table>
