@@ -1,0 +1,29 @@
+<h1>Listing manage_shifts</h1>
+
+<table>
+  <tr>
+    <th>Shift type</th>
+    <th>Shift name</th>
+    <th>Shift input limit</th>
+    <th>Shift memo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @manage_shifts.each do |manage_shift| %>
+  <tr>
+    <td><%= manage_shift.shift_type %></td>
+    <td><%= manage_shift.shift_name %></td>
+    <td><%= manage_shift.shift_input_limit %></td>
+    <td><%= manage_shift.shift_memo %></td>
+    <td><%= link_to 'Show', manage_shift %></td>
+    <td><%= link_to 'Edit', edit_manage_shift_path(manage_shift) %></td>
+    <td><%= link_to 'Destroy', manage_shift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shift', new_manage_shift_path %>

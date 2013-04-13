@@ -35,7 +35,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to 'サポセンシフト管理システム', {:controller => 'main'}, {:class => "brand"} %>
+          <%= link_to 'サポセンシフト管理システム', main_index_path, {:class => "brand"} %>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="#" class="navbar-link">Username</a>
@@ -51,12 +51,12 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">メニュー</li>
-              <li class="active"><a href="#">トップページ</a></li>
+              <li><%= link_to 'トップページ', main_index_path %></li>
               <li><a href="#">シフト入力</a></li>
               <li><a href="#">シフト確認</a></li>
               <li><a href="#"></a></li>
               <li class="nav-header">リーダーメニュー</li>
-              <li><a href="#">シフト作成</a></li>
+              <li><%= link_to 'シフト作成', {:controller => 'manage/shifts', :action => 'new'} %></li>
               <li><a href="#">シフト編集</a></li>
               <li><a href="#">過去のシフト情報</a></li>
               <li class="nav-header">システムメニュー</li>

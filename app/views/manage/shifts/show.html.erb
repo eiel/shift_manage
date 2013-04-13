@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Shift type:</b>
+  <%= @manage_shift.shift_type %>
+</p>
+
+<p>
+  <b>Shift name:</b>
+  <%= @manage_shift.shift_name %>
+</p>
+
+<p>
+  <b>Shift input limit:</b>
+  <%= @manage_shift.shift_input_limit %>
+</p>
+
+<p>
+  <b>Shift memo:</b>
+  <%= @manage_shift.shift_memo %>
+</p>
+
+
+<%= link_to 'Edit', edit_manage_shift_path(@manage_shift) %> |
+<%= link_to 'Back', manage_shifts_path %>

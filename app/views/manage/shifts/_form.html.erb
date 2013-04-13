@@ -1,0 +1,33 @@
+<%= form_for(@manage_shift) do |f| %>
+  <% if @manage_shift.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@manage_shift.errors.count, "error") %> prohibited this manage_shift from being saved:</h2>
+
+      <ul>
+      <% @manage_shift.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :shift_type %><br />
+    <%= f.number_field :shift_type %>
+  </div>
+  <div class="field">
+    <%= f.label :shift_name %><br />
+    <%= f.text_field :shift_name %>
+  </div>
+  <div class="field">
+    <%= f.label :shift_input_limit %><br />
+    <%= f.datetime_select :shift_input_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :shift_memo %><br />
+    <%= f.text_area :shift_memo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

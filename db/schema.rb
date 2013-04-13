@@ -11,6 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20130413021207) do
+
+  create_table "manage_shifts", :force => true do |t|
+    t.integer  "shift_type"
+    t.string   "shift_name"
+    t.datetime "shift_input_limit"
+    t.text     "shift_memo"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
 end
