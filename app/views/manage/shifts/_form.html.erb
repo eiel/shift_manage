@@ -10,23 +10,21 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :shift_type %><br />
-    <%= f.number_field :shift_type %>
-  </div>
-  <div class="field">
-    <%= f.label :shift_name %><br />
-    <%= f.text_field :shift_name %>
-  </div>
-  <div class="field">
-    <%= f.label :shift_input_limit %><br />
-    <%= f.datetime_select :shift_input_limit %>
-  </div>
-  <div class="field">
-    <%= f.label :shift_memo %><br />
-    <%= f.text_area :shift_memo %>
-  </div>
+  
+  <table class="table table-bordered">
+    <tr>
+      <td><%= f.label :shift_type, "シフトタイプ" %></td>
+      <td><%= f.radio_button :shift_type, 0 %>レギュラー<br /><%= f.radio_button :shift_type, 1 %>イレギュラー</td>
+    </tr>
+    <tr>
+      <td><%= f.label :shift_name, "シフト名" %></td>
+      <td><%= f.text_field :shift_name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :shift_input_limit, "入力期限" %></td>
+      <td><%= f.date_select :shift_input_limit %></td>
+    </tr>
+  </table>
   <div class="actions">
     <%= f.submit %>
   </div>
