@@ -1,7 +1,7 @@
 ShiftManage::Application.routes.draw do
 
   namespace :manage do
-    resources :shifts
+    resources :shift
     namespace :shift do
       resources :regular
     end
