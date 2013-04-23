@@ -8,7 +8,9 @@ ShiftManage::Application.routes.draw do
     resources :shift
   end
 
-
+  namespace :main do
+    resources :shift
+  end
   resources :main
   # The priority is based upon order of creation:
   # first created -> highest priority.
