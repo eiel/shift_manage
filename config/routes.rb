@@ -5,7 +5,12 @@ ShiftManage::Application.routes.draw do
       resources :regular
       resources :irregular
     end
-    resources :shift
+    resources :shift do
+      collection do
+        get :shift_list
+        get :past_shift_list
+      end
+    end
   end
 
   namespace :main do

@@ -57,8 +57,8 @@
               <li><a href="#"></a></li>
               <li class="nav-header">リーダーメニュー</li>
               <li><%= link_to 'シフト作成', manage_shift_index_path %></li>
-              <li>シフト編集</li>
-              <li><a href="#">過去のシフト情報</a></li>
+              <li><%= link_to 'シフト編集', shift_list_manage_shift_index_path %></li>
+              <li><%= link_to '過去のシフト情報', past_shift_list_manage_shift_index_path %></li>
               <li class="nav-header">システムメニュー</li>
               <li><a href="#">ユーザ管理</a></li>
             </ul>
