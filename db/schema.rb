@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130418070505) do
+ActiveRecord::Schema.define(:version => 20130419020233) do
 
-  create_table "manage_shift_day", :force => true do |t|
+  create_table "manage_shift_days", :force => true do |t|
     t.integer  "manage_shift_id"
     t.date     "shift_day"
     t.boolean  "condition"
