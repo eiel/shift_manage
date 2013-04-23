@@ -3,6 +3,7 @@ ShiftManage::Application.routes.draw do
   namespace :manage do
     namespace :shift do
       resources :regular
+      resources :irregular
     end
     resources :shift
   end
