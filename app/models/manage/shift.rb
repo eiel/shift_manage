@@ -1,4 +1,5 @@
-class Manage::Shift < ActiveRecord::Base
-  attr_accessible :shift_input_limit, :shift_memo, :shift_name, :shift_type
-  has_many :manage_shift_days
+module Manage::Shift
+  def self.table_name_prefix
+    'manage_shift_'
+  end
 end
