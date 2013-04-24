@@ -1,2 +1,15 @@
 <%= form_for(@rs) do |f| %>
+  <table class="table table-bordered">
+	  <tr>
+	    <th>レギュラーシフト名</th>
+	    <td><%= f.text_field :rs_name %></td>
+	  </tr>
+	  <tr>
+	    <th>入力期限</th>
+	    <td><%= f.date_select :rs_input_limit_date %></td>
+	  </tr>
+  </table>
+  <div class="actions">
+    <%= f.submit(:class => "btn btn-primary") %>
+  </div>
 <% end %>
