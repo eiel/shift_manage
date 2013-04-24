@@ -6,6 +6,10 @@ class Manage::Shift::RegularsController < ManageController
   	@rs = Manage::Shift::Regular.new
   end
 
+  def edit
+  	@rs = Manage::Shift::Regular.find(params[:id])
+  end
+
   def create
     @rs = Manage::Shift::Regular.new(params[:manage_shift_regular])
 	@past_rs = Manage::Shift::Regular.last
@@ -21,8 +25,14 @@ class Manage::Shift::RegularsController < ManageController
 	@rs.rs_Fri = past_rs.to_s + "5"
 	@rs.rs_condition = 1
     if @rs.save
-      redirect_to :controller => 'manage/shift/regulars'
-    else
+      redirect_to shift_list_manage_shift_index_path
     end
+  end
+
+	def update
+		@rs = Manage::Shift::Regular.find(params[:id])
+		if @rs.update_attributes(params[:manage_shift_regular])
+		  redirect_to shift_list_manage_shift_index_path
+		end
   end
 end
