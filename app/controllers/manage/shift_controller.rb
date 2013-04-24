@@ -3,6 +3,7 @@ class Manage::ShiftController < ManageController
   end
 
   def shift_list
+  	@rs = Manage::Shift::Regular.all
   end
 
   def past_shift_list
