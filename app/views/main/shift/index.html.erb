@@ -1,0 +1,21 @@
+<h3>入力受付中シフト一覧</h3>
+<h4>レギュラーシフト</h4>
+<% if @rs == nil %>
+  <p>現在入力受付中のレギュラーシフトはありません。</p>
+<% else %>
+  <table class="table table-borderd">
+    <tr>
+      <th>レギュラーシフト名</th>
+      <th>入力期限</th>
+      <th colspan="2">操作</th>
+    </tr>
+	  <% @rs.each do |rs| %>
+	    <tr>
+	      <td><%= rs.rs_name %></td>
+	      <td><%= rs.rs_input_limit_date %></td>
+	      <td><%= link_to '編集',  edit_manage_shift_regular_path(rs.id) %></td>
+	      <td><%= link_to '詳細',  manage_shift_regular_path(rs.id) %></td>
+	    </tr>
+	  <% end %>
+  </table>
+<% end %>
