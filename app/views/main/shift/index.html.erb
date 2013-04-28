@@ -1,6 +1,6 @@
 <h3>入力受付中シフト一覧</h3>
 <h4>レギュラーシフト</h4>
-<% if @rs == nil %>
+<% if @rs.empty? then %>
   <p>現在入力受付中のレギュラーシフトはありません。</p>
 <% else %>
   <table class="table table-borderd">
@@ -13,8 +13,8 @@
 	    <tr>
 	      <td><%= rs.rs_name %></td>
 	      <td><%= rs.rs_input_limit_date %></td>
-	      <td><%= link_to '編集',  edit_manage_shift_regular_path(rs.id) %></td>
-	      <td><%= link_to '詳細',  manage_shift_regular_path(rs.id) %></td>
+	      <td><%= link_to 'シフト申請',  edit_manage_shift_regular_path(rs.id), {:class => "btn btn-block btn-info"}  %></td>
+	      <td><%= link_to '申請状態確認',  manage_shift_regular_path(rs.id), {:class => "btn btn-block btn-warning"}  %></td>
 	    </tr>
 	  <% end %>
   </table>
