@@ -14,6 +14,13 @@ ShiftManage::Application.routes.draw do
   end
 
   namespace :main do
+    namespace :shift do
+      resources :regulars do
+        member do
+          get :apply
+        end
+      end
+    end
     resources :shift
   end
   resources :main

@@ -13,7 +13,7 @@
 	    <tr>
 	      <td><%= rs.rs_name %></td>
 	      <td><%= rs.rs_input_limit_date %></td>
-	      <td><%= link_to 'シフト申請',  edit_manage_shift_regular_path(rs.id), {:class => "btn btn-block btn-info"}  %></td>
+	      <td><%= link_to 'シフト申請',  apply_main_shift_regular_path(rs.id), {:class => "btn btn-block btn-info"}  %></td>
 	      <td><%= link_to '申請状態確認',  manage_shift_regular_path(rs.id), {:class => "btn btn-block btn-warning"}  %></td>
 	    </tr>
 	  <% end %>
