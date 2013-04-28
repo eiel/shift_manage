@@ -9,9 +9,9 @@
     <tr>
       <td><%= rs.rs_name %></td>
       <td><%= rs.rs_input_limit_date %></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><%= link_to '編集',  edit_manage_shift_regular_path(rs.id) %></td>
+      <td><%= link_to '詳細',  manage_shift_regular_path(rs.id) %></td>
+      <td><%= link_to '削除',  rs, method: :delete, data: { confirm: "レギュラーシフト「#{rs.rs_name}」を削除してもよろしいですか?" } %></td>
     </tr>
   <% end %>
 </table>
