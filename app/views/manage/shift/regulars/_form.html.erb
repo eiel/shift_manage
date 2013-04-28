@@ -6,7 +6,11 @@
 	  </tr>
 	  <tr>
 	    <th>入力期限</th>
-	    <td><%= f.date_select :rs_input_limit_date %></td>
+	    <td><%== sprintf(
+  f.date_select(
+    :rs_input_limit_date, :use_month_numbers => true, 
+    :date_separator => '%s'), 
+    '年', '月') + '日' %></td>
 	  </tr>
   </table>
   <div class="actions">
