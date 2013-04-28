@@ -18,6 +18,7 @@ ShiftManage::Application.routes.draw do
       resources :regulars do
         member do
           get :apply
+          get :apply_status
         end
       end
     end
