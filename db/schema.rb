@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424023752) do
+ActiveRecord::Schema.define(:version => 20130501052254) do
+
+  create_table "main_shift_regulars_input_regular_shifts", :force => true do |t|
+    t.integer  "irs_date_id"
+    t.integer  "irs_username_id"
+    t.integer  "irs_lect1"
+    t.integer  "irs_lect2"
+    t.integer  "irs_lect3"
+    t.integer  "irs_lect4"
+    t.integer  "irs_lect5"
+    t.integer  "irs_deside_lect1"
+    t.integer  "irs_deside_lect2"
+    t.integer  "irs_deside_lect3"
+    t.integer  "irs_deside_lect4"
+    t.integer  "irs_deside_lect5"
+    t.boolean  "irs_condition"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "manage_shift_days", :force => true do |t|
     t.integer  "manage_shift_id"

@@ -1,1 +1,18 @@
 <h3>レギュラーシフト「<%= @apply_rs.rs_name %>」申請状況</h3>
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">月曜日</a></li>
+    <li><a href="#tab2" data-toggle="tab">火曜日</a></li>
+    <li><a href="#tab2" data-toggle="tab">水曜日</a></li>
+    <li><a href="#tab2" data-toggle="tab">木曜日</a></li>
+    <li><a href="#tab2" data-toggle="tab">金曜日</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <p>I'm in Section 1.</p>
+    </div>
+    <div class="tab-pane" id="tab2">
+      <p>Howdy, I'm in Section 2.</p>
+    </div>
+  </div>
+</div>

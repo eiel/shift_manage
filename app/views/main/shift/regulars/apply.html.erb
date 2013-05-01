@@ -1,1 +1,31 @@
 <h3>レギュラーシフト「<%= @apply_rs.rs_name %>」申請画面</h3>
+<div class="tabbable tabs-left">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">月曜日</a></li>
+    <li><a href="#tab2" data-toggle="tab">火曜日</a></li>
+    <li><a href="#tab3" data-toggle="tab">水曜日</a></li>
+    <li><a href="#tab4" data-toggle="tab">木曜日</a></li>
+    <li><a href="#tab5" data-toggle="tab">金曜日</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <%= form_for @irs, :url => {:controller => :regulars, :action => :create} do |f| %>
+        <table class="table table-bordered">
+          <thead>
+          	<tr>
+							<td></td>
+							<td>1コマ目</td>
+							<td>2コマ目</td>
+							<td>3コマ目</td>          		
+							<td>4コマ目</td>
+							<td>5コマ目</td>
+          	</tr>
+          </thead>
+        </table>
+      <% end %>
+    </div>
+    <div class="tab-pane" id="tab2">
+      <p>Howdy, I'm in Section 2.</p>
+    </div>
+  </div>
+</div>
