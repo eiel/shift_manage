@@ -25,17 +25,17 @@
           </tr>
         </thead>
         <tbody>
-          <% @entry_Mon_status.each do |entry_Mon_status| %>
+          <% @entry_Mon_status.each do |eMs| %>
             <tr>
-              <td><%= entry_Mon_status.irs_username_id %></td>
-              <td><%= entry_Mon_status.irs_username_id %></td>
-              <td><%= entry_Mon_status.irs_username_id %></td>
-              <td><%= entry_Mon_status.irs_username_id %></td>
-              <td><%= table_output(entry_Mon_status.irs_lect1) %></td>
-              <td><%= table_output(entry_Mon_status.irs_lect2) %></td>
-              <td><%= table_output(entry_Mon_status.irs_lect3) %></td>
-              <td><%= table_output(entry_Mon_status.irs_lect4) %></td>
-              <td><%= table_output(entry_Mon_status.irs_lect5) %></td>
+              <td><%= eMs.irs_username_id %></td>
+              <td><%= morning_work_time(eMs.irs_lect1,eMs.irs_lect2) %></td>
+              <td><%= afternoon_work_time(eMs.irs_lect3,eMs.irs_lect4,eMs.irs_lect5) %></td>
+              <td><%= eMs.irs_username_id %></td>
+              <td><%= table_output(eMs.irs_lect1) %></td>
+              <td><%= table_output(eMs.irs_lect2) %></td>
+              <td><%= table_output(eMs.irs_lect3) %></td>
+              <td><%= table_output(eMs.irs_lect4) %></td>
+              <td><%= table_output(eMs.irs_lect5) %></td>
             </tr>
           <% end %>
         </tbody>
