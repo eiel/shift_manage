@@ -1,4 +1,4 @@
-<h3>レギュラーシフト「<%= @apply_rs.rs_name %>」申請状況</h3>
+<h3>レギュラーシフト「<%= @entry_status.rs_name %>」申請状況</h3>
 <div class="tabbable"> <!-- Only required for left/right tabs -->
   <ul class="nav nav-tabs">
     <li class="active"><a href="#tab1" data-toggle="tab">月曜日</a></li>
@@ -10,6 +10,36 @@
   <div class="tab-content">
     <div class="tab-pane active" id="tab1">
       <p>I'm in Section 1.</p>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <td>スタッフ名</td>
+            <td>午前勤務</td>
+            <td>午後勤務</td>
+            <td>勤務時間</td>
+            <td>1コマ目</td>
+            <td>2コマ目</td>
+            <td>3コマ目</td>
+            <td>4コマ目</td>
+            <td>5コマ目</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% @entry_Mon_status.each do |entry_Mon_status| %>
+            <tr>
+              <td><%= entry_Mon_status.irs_username_id %></td>
+              <td><%= entry_Mon_status.irs_username_id %></td>
+              <td><%= entry_Mon_status.irs_username_id %></td>
+              <td><%= entry_Mon_status.irs_username_id %></td>
+              <td><%= table_output(entry_Mon_status.irs_lect1) %></td>
+              <td><%= table_output(entry_Mon_status.irs_lect2) %></td>
+              <td><%= table_output(entry_Mon_status.irs_lect3) %></td>
+              <td><%= table_output(entry_Mon_status.irs_lect4) %></td>
+              <td><%= table_output(entry_Mon_status.irs_lect5) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
     <div class="tab-pane" id="tab2">
       <p>Howdy, I'm in Section 2.</p>
