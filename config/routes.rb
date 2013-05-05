@@ -16,6 +16,7 @@ ShiftManage::Application.routes.draw do
   namespace :main do
     namespace :shift do
       resources :regulars do
+        resources :entries
         member do
           get :apply
           get :apply_status
