@@ -42,4 +42,33 @@ module Main::Shift::RegularHelper
   	  "-"
   	end 
   end
+
+  def total_work_time(status1, status2, status3, status4, status5)
+  	time = 0
+  	if status1 == 2
+  	  time += 90
+  	end
+  	if status2 == 2
+  	  time += 90
+  	end
+  	if status3 == 2
+  	  time += 90
+  	end
+  	if status4 == 2
+  	  time += 90
+  	end
+  	if status5 == 2
+  	  time += 90
+  	end
+  	if status1 ==2 && status2 ==2
+  	  time += 15
+  	end
+  	if status3 ==2 && status4 ==2
+  	  time += 15
+  	end
+  	if status4 ==2 && status5 ==2
+  	  time += 15
+  	end
+  	return time
+  end
 end
